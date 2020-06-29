@@ -10,11 +10,7 @@ interface TokenPayload {
   sub: string;
 }
 
-export default function ensureAuthenticated(
-  req: Request,
-  res: Response,
-  next: NextFunction,
-): void {
+export default function ensureAuthenticated(req: Request, res: Response, next: NextFunction): void {
   const authHeader = req.headers.authorization;
 
   if (!authHeader) {
